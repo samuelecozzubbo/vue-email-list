@@ -29,7 +29,7 @@ h1 {
 .list-container{
     margin-top: 20px;
     max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 ul {
