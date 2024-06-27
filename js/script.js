@@ -4,18 +4,22 @@ const { createApp } = Vue ;
 createApp( {   
     data() {   
         return {
-            mail:"",
+            emails:[
+
+            ],
         }
     },
     methods: {
     },
     mounted() {
         console.log("the component is now mounted");
+        for (let i = 0; i < 10; i++){
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => { 
                 const result = response.data.response; 
-                this.mail = result;
+                this.emails.push(result);
                 console.log(result);
             });
-    }
+        }
+    }   
 }).mount('#app')  

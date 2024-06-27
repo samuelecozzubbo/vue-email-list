@@ -13,9 +13,12 @@
 <body>
     <div id="app" class="container">
         <h1 style="text-align: center;">Mail list generator</h1>
-        <ul>
-            <li>{{mail}}</li>
-        </ul>
+        <div class="list-container">
+            <ul>
+                <li v-for="mail in emails">{{mail}}</li>
+            </ul>
+        </div>
+        
     </div>
 
     <script src="js/script.js"></script>
