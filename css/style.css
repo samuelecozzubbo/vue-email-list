@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+
+.container{
+    max-width: 800px;
+    background-color: lightgray;
+    margin: 0 auto;
+    height: 100vh;
+}
