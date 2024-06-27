@@ -14,9 +14,10 @@
     <div id="app" class="container">
         <h1 style="text-align: center;">Mail list generator</h1>
         <div class="list-container">
-            <ul>
+            <ul v-if="mailCheck">
                 <li v-for="mail in emails">{{mail}}</li>
             </ul>
+            <div v-else class="caricamento">Caricamento mail</div>
         </div>
         
     </div>

@@ -4,6 +4,8 @@ const { createApp } = Vue ;
 createApp( {   
     data() {   
         return {
+            mailToGenerate : 10,
+            mailCheck: false,
             emails:[
 
             ],
@@ -13,12 +15,16 @@ createApp( {
     },
     mounted() {
         console.log("the component is now mounted");
-        for (let i = 0; i < 10; i++){
+        for (let i = 0; i < this.mailToGenerate; i++){
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => { 
                 const result = response.data.response; 
                 this.emails.push(result);
                 console.log(result);
+                //Cambio stato variabile caricamento
+                if(i === 9){
+                    this.mailCheck = true;
+                }
             });
         }
     }   
